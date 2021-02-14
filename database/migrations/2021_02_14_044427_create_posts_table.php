@@ -19,8 +19,8 @@ class CreatePostsTable extends Migration
             $table->string("thumbnail");
             $table->integer("user_id");
             $table->integer("category_id");
-            $table->text("dateils");
-            $table->timestamp();
+            $table->text("detail");
+            $table->timestamps();
         });
     }
 
