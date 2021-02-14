@@ -3,6 +3,7 @@
 
 @section('content')
       <h1>หมวดหมู่ข่าว</h1>
+      <a href="/category/create">+ เพิ่มหมวดหมู่ใหม่</a>
       <table>
           <thead>
           <th>
@@ -20,7 +21,7 @@
                 <td>{{$item->id}}</td>
                 <td>{{$item->name}}</td>
                 <td>{{$item->created_at}}</td>
-                <td>จัดการ</td>
+                <td>แก้ไข | ลบ</td>
             </tr>
           @endforeach
     </tbody>
