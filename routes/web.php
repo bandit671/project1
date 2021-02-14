@@ -7,17 +7,6 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/contact', [HomeController::class, 'contact']);
@@ -44,7 +33,8 @@ Route::get('/post/edit/{id}', [PostController::class, 'edit']);
 Route::post('/post/update/{id}', [PostController::class, 'update']);
 Route::get('/post/delete/{id}', [PostController::class, 'delete']);
 
-Route::get('/auth/login', [AuthController::class, 'login']);
+Route::get('/auth/login', [AuthController::class, 'login'])->name("login");
 Route::post('/auth/doLogin', [AuthController::class, 'doLogin']);
 Route::get('/auth/register', [AuthController::class, 'register']);
 Route::post('/auth/doRegister', [AuthController::class, 'doRegister']);
+Route::get('/auth/logout', [AuthController::class, 'logout']);
