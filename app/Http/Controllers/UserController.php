@@ -27,9 +27,9 @@ class UserController extends Controller
         $password = $request->input('password');
 
         $user = new User();
-        $user->name = "Bandit Bunkamjon";
-        $user->username = "admin";
-        $user->email = "61143222@g.cmru.ac.th";
+        $user->name = $name;
+        $user->username = $username;
+        $user->email = $email;
         $user->password = Hash::make($password);
         $user->save();
 
@@ -53,9 +53,9 @@ class UserController extends Controller
         $password = $request->input('password');
 
         $user = User::find($id);
-        $user->name = "Bandit Bunkamjon";
-        $user->username = "admin";
-        $user->email = "61143222@g.cmru.ac.th";
+        $user->name = $name;
+        $user->username = $username;
+        $user->email = $email;
         $user->password = Hash::make($password);
         $user->save();
 
